@@ -17,8 +17,8 @@ const gbPlusBtn = document.querySelector("#add-gb");
 const gbMinusBtn = document.querySelector("#minus-gb");
 const ccPlusBtn = document.querySelector("#add-cc");
 const ccMinusBtn = document.querySelector("#minus-cc");
-const ssPlusBtn = document.querySelector("#add-sugar");
-const ssMinusBtn = document.querySelector("#minus-sugar");
+const sugarPlusBtn = document.querySelector("#add-sugar");
+const sugarMinusBtn = document.querySelector("#minus-sugar");
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`;
@@ -29,21 +29,39 @@ gbPlusBtn.addEventListener("click", function () {
   console.log("Gingerbread + button was clicked!");
 
   // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+  gb++;
+  console.log("current gb: ", gb);
 });
 
 // TODO: Hook up event listeners for the rest of the buttons
 gbMinusBtn.addEventListener("click", function () {
   console.log("gingerbread - button clicked");
+  if (gb > 0) {
+    gb--;
+  }
+  console.log("current gb: ", gb);
 });
+
+//chocochip
 ccPlusBtn.addEventListener("click", function () {
   console.log("chocochip + button clicked");
 });
 ccMinusBtn.addEventListener("click", function () {
   console.log("chocochip - button clicked");
+  if (cc > 0) {
+    cc--;
+  }
+  console.log("current cc: ", cc);
 });
-ssPlusBtn.addEventListener("click", function () {
-  console.log("gingerbread - button clicked");
+
+//sugar
+sugarPlusBtn.addEventListener("click", function () {
+  console.log("sugar + button clicked");
 });
-ssMinusBtn.addEventListener("click", function () {
-  console.log("gingerbread - button clicked");
+sugarMinusBtn.addEventListener("click", function () {
+  console.log("sugar - button clicked");
+  if (sugar > 0) {
+    sugar--;
+  }
+  console.log("current sugar: ", sugar);
 });
